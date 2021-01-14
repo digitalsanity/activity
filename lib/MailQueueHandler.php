@@ -426,9 +426,9 @@ class MailQueueHandler {
 			$placeholders[] = '{' . $placeholder . '}';
 
 			if ($parameter['type'] === 'file') {
-				$replacement = $parameter['path'];
+				$replacement = (string) $parameter['path'];
 			} else {
-				$replacement = $parameter['name'];
+				$replacement = (string) $parameter['name'];
 			}
 
 			if (isset($parameter['link'])) {
